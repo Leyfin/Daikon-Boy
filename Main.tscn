@@ -1,4 +1,3 @@
+[gd_scene format=3 uid="uid://8sp6o5y6y6ta"]
 
-[node name="Main" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_4kcbb")]
+[node name="Node2D" type="Node2D"]
