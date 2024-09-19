@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bru8f18u1qdnr"]
+
+[ext_resource type="Texture2D" uid="uid://giiw56jjxeg6" path="res://picture assets/Screenshot 2024-09-05 at 22-02-47 bd764bb25d49a05105060185774ba14cd2c846f7.webp (WEBP Image 4500 × 3000 pixels) — Scaled (30%).png" id="1_nhcmg"]
+[ext_resource type="PackedScene" uid="uid://bvb5nyuix5l7j" path="res://scenes/player.tscn" id="2_rbsht"]
+
+[node name="level" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(565, 329.75)
+scale = Vector2(0.844702, 0.720892)
+texture = ExtResource("1_nhcmg")
+
+[node name="player" parent="." instance=ExtResource("2_rbsht")]
+position = Vector2(157, 141)
