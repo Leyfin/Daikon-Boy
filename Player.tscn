@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://56vajen464yk"]
+
+[ext_resource type="Texture2D" uid="uid://4n4dxmgyapqm" path="res://icon.svg" id="1_glqpu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(606, 308)
+texture = ExtResource("1_glqpu")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+position = Vector2(-2, 0)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
