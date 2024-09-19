@@ -2,4 +2,4 @@
 .godot/
 /android/
 # Mac folder ignore
-.DS_Store
+**/.DS_Store
