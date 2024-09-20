@@ -30,10 +30,6 @@ region = Rect2(64, 32, 32, 32)
 atlas = ExtResource("2_ik88c")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jqhyc"]
-atlas = ExtResource("2_ik88c")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ww4j4"]
 atlas = ExtResource("2_ik88c")
 region = Rect2(32, 0, 32, 32)
@@ -45,6 +41,10 @@ region = Rect2(64, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_7yiv7"]
 atlas = ExtResource("2_ik88c")
 region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqhyc"]
+atlas = ExtResource("2_ik88c")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5mtpg"]
 animations = [{
@@ -69,9 +69,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jqhyc")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ww4j4")
 }, {
 "duration": 1.0,
@@ -79,6 +76,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7yiv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqhyc")
 }],
 "loop": true,
 "name": &"walk",
@@ -100,8 +100,7 @@ script = ExtResource("1_dacvk")
 texture_filter = 1
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_5mtpg")
-animation = &"idle"
-frame_progress = 0.217105
+animation = &"walk"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/AnimatedSprite2D"]
 
