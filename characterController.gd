@@ -2,15 +2,18 @@ extends CharacterBody2D
 
 
 const SPEED = 700.0
-const JUMP_VELOCITY = -1300.0
-const mult = 2
+const JUMP_VELOCITY = -900.0
+const mult = 60
+const GRAVITY = 9.8
+var air_time = 0.0
+const BONUS_GRAVITY = 2.0
 @onready var _animated_sprite = $AnimatedSprite2D
 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * mult  * delta
+		velocity += get_gravity() * delta * (2 if velocity.y > 0 else 1)
 	
 	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right") and is_on_floor():
 		_animated_sprite.play("walk")
