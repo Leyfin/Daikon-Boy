@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwablehxua0f"]
+[gd_scene load_steps=13 format=3 uid="uid://dwablehxua0f"]
 
 [ext_resource type="Script" path="res://CharacterController.gd" id="1_dacvk"]
+[ext_resource type="Script" path="res://fullscreen.gd" id="1_notjk"]
 [ext_resource type="Texture2D" uid="uid://cyejx6r70gjip" path="res://Art Assets/Character assets/Spritesheet.png" id="2_ik88c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efso3"]
@@ -74,6 +75,7 @@ animations = [{
 size = Vector2(109.75, 280.5)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_notjk")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(58, 41)
@@ -84,7 +86,7 @@ texture_filter = 1
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_5mtpg")
 animation = &"idle"
-frame_progress = 0.827181
+frame_progress = 0.217105
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/AnimatedSprite2D"]
 
