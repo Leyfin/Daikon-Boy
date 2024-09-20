@@ -1,11 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwablehxua0f"]
+[gd_scene load_steps=4 format=3 uid="uid://dwablehxua0f"]
 
-[ext_resource type="Texture2D" uid="uid://4n4dxmgyapqm" path="res://icon.svg" id="1_s6tu4"]
+[ext_resource type="Script" path="res://charcontrol.gd" id="1_dacvk"]
+[ext_resource type="Texture2D" uid="uid://b7kjf1i55tfeb" path="res://Art Assets/temp assets/Screenshot 2024-09-19 183644.png" id="1_ktc5e"]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w327q"]
+size = Vector2(353, 561)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(574, 326)
-texture = ExtResource("1_s6tu4")
+[node name="Node2D" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(58, 41)
+script = ExtResource("1_dacvk")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(343, 195)
+texture = ExtResource("1_ktc5e")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(354, 195)
+shape = SubResource("RectangleShape2D_w327q")

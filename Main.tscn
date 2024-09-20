@@ -1,3 +1,45 @@
-[gd_scene format=3 uid="uid://8sp6o5y6y6ta"]
+[gd_scene load_steps=6 format=3 uid="uid://8sp6o5y6y6ta"]
+
+[ext_resource type="Texture2D" uid="uid://giiw56jjxeg6" path="res://Art Assets/temp assets/Screenshot 2024-09-05 at 22-02-47 bd764bb25d49a05105060185774ba14cd2c846f7.webp (WEBP Image 4500 × 3000 pixels) — Scaled (30%).png" id="1_7ny7t"]
+[ext_resource type="PackedScene" uid="uid://dwablehxua0f" path="res://Player.tscn" id="1_whg58"]
+[ext_resource type="Texture2D" uid="uid://4n4dxmgyapqm" path="res://Art Assets/temp assets/icon.svg" id="3_c8xi1"]
+
+[sub_resource type="GDScript" id="GDScript_a4x0m"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rxq3"]
+size = Vector2(2070, 248)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Screenshot2024-09-05At22-02-47Bd764Bb25d49a05105060185774Ba14Cd2c846f7_webp(webpImage4500×3000Pixels)—Scaled(30_)" type="Sprite2D" parent="."]
+position = Vector2(162, 645)
+scale = Vector2(4.75932, 4.20325)
+texture = ExtResource("1_7ny7t")
+
+[node name="Player" parent="." instance=ExtResource("1_whg58")]
+position = Vector2(32, 74)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-48, 864)
+script = SubResource("GDScript_a4x0m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(495, 1020)
+shape = SubResource("RectangleShape2D_3rxq3")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(495, 1021)
+scale = Vector2(16.36, 2.08)
+texture = ExtResource("3_c8xi1")
