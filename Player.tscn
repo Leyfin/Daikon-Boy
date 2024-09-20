@@ -1,13 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://dwablehxua0f"]
 
 [ext_resource type="Script" path="res://CharacterController.gd" id="1_dacvk"]
+[ext_resource type="Script" path="res://fullscreen.gd" id="1_knvc2"]
 [ext_resource type="Texture2D" uid="uid://cyejx6r70gjip" path="res://Art Assets/Character assets/Spritesheet.png" id="2_ik88c"]
-
-[sub_resource type="GDScript" id="GDScript_pnybj"]
-script/source = "extends Node2D
-func _ready() -> void:
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efso3"]
 atlas = ExtResource("2_ik88c")
@@ -80,7 +75,7 @@ animations = [{
 size = Vector2(109.75, 280.5)
 
 [node name="Node2D" type="Node2D"]
-script = SubResource("GDScript_pnybj")
+script = ExtResource("1_knvc2")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(58, 41)
