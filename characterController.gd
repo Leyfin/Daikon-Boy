@@ -14,14 +14,14 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta * (2 if velocity.y > 0 else 1)
-	
-	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right") and is_on_floor():
-		_animated_sprite.play("walk")
-	elif not is_on_floor():
 		_animated_sprite.play("jump")
-	else:
-		_animated_sprite.play("idle")
 	
+	if is_on_floor():
+		if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
+			_animated_sprite.play("walk")
+		
+		else:
+			_animated_sprite.play("idle")
 		
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
