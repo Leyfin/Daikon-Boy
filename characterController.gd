@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		
 	#apply gravity and play jump animation
 	if not is_on_floor():
-		velocity += get_gravity() * delta * (2 if velocity.y > 0 else 1)
+		velocity += get_gravity() * delta * (3 if velocity.y > 0 else 2)
 		_animated_sprite.play("in the air")
 	
 	#make the character jump

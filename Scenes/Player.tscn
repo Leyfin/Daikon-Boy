@@ -82,6 +82,7 @@ position = Vector2(58, 41)
 collision_layer = 2
 script = ExtResource("1_dacvk")
 SPEED = 550.0
+JUMP_VELOCITY = -700.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
@@ -90,6 +91,7 @@ sprite_frames = SubResource("SpriteFrames_5mtpg")
 animation = &"in the air"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/AnimatedSprite2D"]
+offset = Vector2(0, -100)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0.125, 18.75)
