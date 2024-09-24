@@ -73,7 +73,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wejk"]
 size = Vector2(109.75, 280.5)
 
-[node name="Node2D" type="Node2D"]
+[node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 light_mask = 2
@@ -81,6 +81,7 @@ visibility_layer = 2
 position = Vector2(58, 41)
 collision_layer = 2
 script = ExtResource("1_dacvk")
+SPEED = 550.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
