@@ -8,7 +8,7 @@ extends CharacterBody2D
 
 func _physics_process(delta: float) -> void:
 	
-	#get value between -1 and 1 according to input direction
+	##get value between -1 and 1 according to input direction
 	var movement: float = Input.get_axis("move_left", "move_right")
 
 	#Handle acceleration, animation, and flipping
