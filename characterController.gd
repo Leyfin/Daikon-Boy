@@ -3,8 +3,8 @@ extends CharacterBody2D
 #get the animated sprite node when loaded
 @onready var _animated_sprite = $AnimatedSprite2D
 
-@export var SPEED: float = 700.0
-@export var JUMP_VELOCITY: float = -900.0
+@export var SPEED: float = 550.0
+@export var JUMP_VELOCITY: float = -700.0
 
 func _physics_process(delta: float) -> void:
 	
