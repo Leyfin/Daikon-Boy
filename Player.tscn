@@ -64,7 +64,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_s6ldm")
 }],
 "loop": true,
-"name": &"jump",
+"name": &"in the air",
 "speed": 5.0
 }, {
 "frames": [{
@@ -102,7 +102,7 @@ script = ExtResource("1_dacvk")
 texture_filter = 1
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_5mtpg")
-animation = &"walk"
+animation = &"in the air"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/AnimatedSprite2D"]
 
