@@ -3,13 +3,13 @@ extends CharacterBody2D
 #get the animated sprite node when loaded
 @onready var _animated_sprite = $AnimatedSprite2D
 
-const SPEED: float = 700.0
-const JUMP_VELOCITY: float = -900.0
+@export var SPEED: float = 700.0
+@export var JUMP_VELOCITY: float = -900.0
 
 func _physics_process(delta: float) -> void:
 	
 	#get value between -1 and 1 according to input direction
-	var movement := Input.get_axis("move_left", "move_right")
+	var movement: float = Input.get_axis("move_left", "move_right")
 
 	#Handle acceleration, animation, and flipping
 	if movement: 

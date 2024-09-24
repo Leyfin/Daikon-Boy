@@ -1,22 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dwablehxua0f"]
+[gd_scene load_steps=12 format=3 uid="uid://dwablehxua0f"]
 
 [ext_resource type="Script" path="res://CharacterController.gd" id="1_dacvk"]
 [ext_resource type="Texture2D" uid="uid://cyejx6r70gjip" path="res://Art Assets/Character assets/Spritesheet.png" id="2_ik88c"]
-
-[sub_resource type="GDScript" id="GDScript_vlf86"]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-
-func _ready() -> void:
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efso3"]
 atlas = ExtResource("2_ik88c")
@@ -89,7 +74,6 @@ animations = [{
 size = Vector2(109.75, 280.5)
 
 [node name="Node2D" type="Node2D"]
-script = SubResource("GDScript_vlf86")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 light_mask = 2
