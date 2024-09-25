@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dwablehxua0f"]
 
-[ext_resource type="Script" path="res://CharacterController.gd" id="1_dacvk"]
+[ext_resource type="Script" path="res://Scripts/CharacterController.gd" id="1_dacvk"]
 [ext_resource type="Texture2D" uid="uid://cyejx6r70gjip" path="res://Art Assets/Character Assets/Spritesheet.png" id="2_ik88c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efso3"]

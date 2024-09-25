@@ -13,7 +13,6 @@ config_version=5
 config/name="Daikon Boy"
 run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [display]
 
@@ -22,6 +21,16 @@ window/size/viewport_height=1080
 window/size/mode=4
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://Art Assets/": "red",
+"res://Art Assets/Character Assets/": "orange",
+"res://Art Assets/Environment Assets/": "teal",
+"res://Scenes/": "purple",
+"res://Scripts/": "green"
+}
 
 [input]
 
