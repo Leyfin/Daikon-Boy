@@ -8,7 +8,7 @@ extends CharacterBody2D
 var isBuried: bool = false
 
 func _physics_process(delta: float) -> void:
-	##get value between -1 and 1 according to input direction
+	#get value between -1 and 1 according to input direction
 	var movement: float = Input.get_axis("move_left", "move_right")
 
 	if Input.is_action_just_pressed("bury"):
@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 	if movement: 
 		velocity.x = movement * SPEED
 		if isBuried == false: _animated_sprite.play("walk")
+
 		else: _animated_sprite.play("buried")
 		_animated_sprite.flip_h = true if velocity.x < 0 else false
 	
@@ -25,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if isBuried == false: _animated_sprite.play("idle")
-		elif movement == 0:
+		else:
 			_animated_sprite.play("peek")
 
 	#apply gravity and play in the air animation
