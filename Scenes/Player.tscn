@@ -102,7 +102,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wejk"]
-size = Vector2(109.75, 280.5)
+size = Vector2(120, 271)
 
 [node name="Player" type="Node2D"]
 visibility_layer = 3
@@ -124,5 +124,5 @@ animation = &"idle"
 offset = Vector2(0, -100)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0.125, 18.75)
+position = Vector2(0, 24.5)
 shape = SubResource("RectangleShape2D_5wejk")
