@@ -118,8 +118,7 @@ script = ExtResource("1_dacvk")
 texture_filter = 1
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_5mtpg")
-animation = &"peek"
-frame_progress = 0.136811
+animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/AnimatedSprite2D"]
 offset = Vector2(0, -100)

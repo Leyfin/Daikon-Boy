@@ -4,8 +4,8 @@ extends CharacterBody2D
 @onready var _animated_sprite = $AnimatedSprite2D
 @export var SPEED: float = 550.0
 @export var JUMP_VELOCITY: float = -700.0
+@export var isBuried: bool
 
-var isBuried: bool = false
 func Anim(animationName, shouldPlayWhenBuried):
 	if shouldPlayWhenBuried == isBuried: _animated_sprite.play(animationName)
 
