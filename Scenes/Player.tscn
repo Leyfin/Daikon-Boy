@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dwablehxua0f"]
+[gd_scene load_steps=16 format=3 uid="uid://dwablehxua0f"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterController.gd" id="1_dacvk"]
 [ext_resource type="Texture2D" uid="uid://cyejx6r70gjip" path="res://Art Assets/Character Assets/Spritesheet.png" id="2_ik88c"]
@@ -104,6 +104,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wejk"]
 size = Vector2(120, 271)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2h70"]
+size = Vector2(9.9, 4.3)
+
 [node name="Player" type="Node2D"]
 visibility_layer = 3
 
@@ -118,11 +121,17 @@ script = ExtResource("1_dacvk")
 texture_filter = 1
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_5mtpg")
-animation = &"idle"
+animation = &"peek"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/AnimatedSprite2D"]
 offset = Vector2(0, -100)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="PlayerCollider" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 24.5)
 shape = SubResource("RectangleShape2D_5wejk")
+
+[node name="BuriedCollider" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, 137.5)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_l2h70")
+disabled = true

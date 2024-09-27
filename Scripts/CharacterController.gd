@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 #get the animated sprite node when loaded
 @onready var _animated_sprite = $AnimatedSprite2D
+@onready var defCollider = $PlayerCollider
+@onready var buriedCollider = $BuriedCollider
 @export var SPEED: float = 550.0
 @export var JUMP_VELOCITY: float = -700.0
 @export var isBuried: bool
@@ -15,6 +17,8 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("bury"):
 		isBuried = true
+		defCollider.disabled = true
+		buriedCollider.disabled = false
 	#Handle acceleration, animation, and flipping
 	if movement: 
 		velocity.x = movement * SPEED
@@ -34,4 +38,6 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("jump"): 
 		velocity.y = JUMP_VELOCITY
 		isBuried = false
+		defCollider.disabled = false
+		buriedCollider.disabled = true
 	move_and_slide()
