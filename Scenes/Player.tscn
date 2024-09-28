@@ -72,6 +72,11 @@ animations = [{
 "name": &"in the air",
 "speed": 5.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 20.0,
 "texture": SubResource("AtlasTexture_afah7")
@@ -116,6 +121,7 @@ visibility_layer = 2
 position = Vector2(58, 41)
 collision_layer = 2
 script = ExtResource("1_dacvk")
+JUMP_VELOCITY = -900.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
