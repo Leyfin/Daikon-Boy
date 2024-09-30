@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 		CurrentBuriedState = true
 		defaultCollider.disabled = true
 		buriedCollider.disabled = false
+		SPEED = 750.0
 	#Handle acceleration, animation, and flipping
 	if movement: 
 		velocity.x = movement * SPEED
@@ -39,4 +40,5 @@ func _physics_process(delta: float) -> void:
 		CurrentBuriedState = false
 		defaultCollider.disabled = false
 		buriedCollider.disabled = true
+		SPEED = 550.0
 	move_and_slide()
