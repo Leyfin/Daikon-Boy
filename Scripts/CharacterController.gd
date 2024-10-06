@@ -12,6 +12,7 @@ func Animate(animationName: String, shouldPlayWhenBuried: bool):
 
 func _physics_process(delta: float) -> void:
 	#get value between -1 and 1 according to input direction
+	print(delta)
 	var movement: float = Input.get_axis("move_left", "move_right")
 	
 	if Input.is_action_just_pressed("bury"):
@@ -21,7 +22,7 @@ func _physics_process(delta: float) -> void:
 		SPEED = 750.0
 	#Handle acceleration, animation, and flipping
 	if movement: 
-		velocity.x = movement * SPEED
+		velocity.x = movement * SPEED 
 		Animate("walk", false)
 		Animate("buried", true)
 		_animated_sprite.flip_h = true if velocity.x < 0 else false
@@ -42,3 +43,4 @@ func _physics_process(delta: float) -> void:
 		buriedCollider.disabled = true
 		SPEED = 550.0
 	move_and_slide()
+	
